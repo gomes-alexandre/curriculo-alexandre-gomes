@@ -159,6 +159,33 @@ a:hover {
     transform: scale(1.05);
 }
 
+.portfolio-container {
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.portfolio-links ul {
+    list-style: none;
+    padding: 0;
+}
+.portfolio-links li {
+    margin: 10px 0;
+}
+.portfolio-links a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+.portfolio-links a:hover {
+    text-decoration: underline;
+}
+.portfolio-projects .project {
+    margin: 20px 0;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .container {

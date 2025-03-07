@@ -3,131 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo - Alexandre Gomes de Souza</title>
+    <title>Portfólio - Alexandre Gomes de Souza</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container" id="curriculo">
-        <div class="left-column">
-            <div class="profile-photo">
-                <img src="foto.jpg" alt="Foto de Perfil">
+    <div class="portfolio-container">
+        <header>
+            <h1>Alexandre Gomes de Souza</h1>
+            <p>Desenvolvedor Iniciante | Apaixonado por Programação</p>
+        </header>
+        <section class="portfolio-links">
+            <h2>Bem-vindo ao meu portfólio!</h2>
+            <p>Explore meus projetos e habilidades:</p>
+            <ul>
+                <li><a href="resume.html"><i class="fas fa-file-alt"></i> Ver Meu Currículo</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Meus Projetos</a></li>
+                <li><a href="https://linkedin.com/in/alegsouza" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/agomes" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+            </ul>
+        </section>
+        <section id="projects" class="portfolio-projects">
+            <h2>Projetos</h2>
+            <div class="project">
+                <h3>Site Pessoal com React</h3>
+                <p>Um site portfólio responsivo, construído com React.</p>
+                <a href="projects/project1.html">Ver Detalhes</a>
             </div>
-            <section class="dados">
-                <h2><i class="fas fa-address-book"></i> Contato</h2>
-                <div class="info-contato">
-                    <div class="contato-item"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</div>
-                    <div class="contato-item"><i class="fas fa-envelope"></i> agsinfotec@gmail.com</div>
-                    <div class="contato-item"><i class="fas fa-phone"></i> (21) 99195-5420</div>
-                    <div class="contato-item"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/alegsouza" target="_blank">linkedin.com/in/alegsouza</a></div>
-                    <div class="contato-item"><i class="fab fa-github"></i> <a href="https://github.com/agomes" target="_blank">github.com/agomes</a></div>
-                </div>
-            </section>
-            <section class="habilidades">
-                <h2><i class="fas fa-tools"></i> Habilidades Técnicas</h2>
-                <div class="skill"><i class="fab fa-html5"></i><span>HTML</span><div class="skill-bar" style="width: 85%;"></div></div>
-                <div class="skill"><i class="fab fa-css3-alt"></i><span>CSS</span><div class="skill-bar" style="width: 80%;"></div></div>
-                <div class="skill"><i class="fab fa-js"></i><span>JavaScript</span><div class="skill-bar" style="width: 75%;"></div></div>
-                <div class="skill"><i class="fab fa-react"></i><span>React</span><div class="skill-bar" style="width: 60%;"></div></div>
-                <div class="skill"><i class="fas fa-database"></i><span>MySQL</span><div class="skill-bar" style="width: 80%;"></div></div>
-                <div class="skill"><i class="fab fa-git-alt"></i><span>Git/GitHub</span><div class="skill-bar" style="width: 70%;"></div></div>
-                <div class="skill"><i class="fab fa-python"></i><span>Python</span><div class="skill-bar" style="width: 50%;"></div></div>
-                <div class="skill"><i class="fas fa-database"></i><span>Oracle</span><div class="skill-bar" style="width: 70%;"></div></div>
-                <div class="skill"><i class="fab fa-node-js"></i><span>Node.js</span><div class="skill-bar" style="width: 55%;"></div></div>
-                <div class="skill"><i class="fab fa-linux"></i><span>Linux</span><div class="skill-bar" style="width: 65%;"></div></div>
-                <div class="skill"><i class="fas fa-exchange-alt"></i><span>REST API</span><div class="skill-bar" style="width: 50%;"></div></div>
-            </section>
-            <section class="formacao">
-                <h2><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h2>
-                <p>Pós-Graduação em Engenharia de Software - Faculdade Anhanguera - RJ</p>
-                <p>Graduação em Análise de Sistemas - Faculdade UniSãoJosé - RJ</p>
-                <p>Curso Técnico em Mecatrônica - Escola Técnica Electra - RJ</p>
-            </section>
-            <section class="idiomas">
-                <h2><i class="fas fa-globe"></i> Idiomas</h2>
-                <p>Português: Nativo</p>
-                <p>Inglês: Técnico</p>
-            </section>
-            <section class="interesses">
-                <h2><i class="fas fa-lightbulb"></i> Interesses Profissionais</h2>
-                <p>Desenvolvimento Web</p>
-                <p>Desenvolvimento C# .NET</p>
-                <p>Automação com Python</p>
-                <p>Inteligência Artificial</p>
-            </section>
-        </div>
-        <div class="right-column">
-            <header>
-                <h1>Alexandre Gomes de Souza</h1>
-                <p>Desenvolvedor/Programador (Iniciante)</p>
-            </header>
-            <section class="sobre">
-                <h2><i class="fas fa-user"></i> Sobre Mim</h2>
-                <p>Sou um desenvolvedor iniciante apaixonado por programação, com sólida base em HTML, CSS, JavaScript, React e MySQL, adquirida por meio de cursos e projetos pessoais. Tenho experiência em suporte técnico, o que me deu habilidades em resolução de problemas e lógica analítica, e estou em transição para a área de desenvolvimento, buscando aplicar meu conhecimento em projetos reais.</p>
-            </section>
-            <section class="certificacoes">
-                <h2><i class="fas fa-certificate"></i> Cursos e Certificações</h2>
-                <div class="certificado">
-                    <p><strong>Fundamentos de Programação em JavaScript</strong> - Udemy (2023)</p>
-                    <p>Curso completo sobre JavaScript, incluindo manipulação de DOM e assincronismo.</p>
-                </div>
-                <div class="certificado">
-                    <p><strong>Desenvolvimento Web com React</strong> - Alura (2022)</p>
-                    <p>Certificação em desenvolvimento de aplicações modernas com React e gerenciamento de estado.</p>
-                </div>
-                <div class="certificado">
-                    <p><strong>SQL e Bancos de Dados Relacionais</strong> - Coursera (2023)</p>
-                    <p>Curso focado em consultas SQL e gerenciamento de bancos de dados com MySQL.</p>
-                </div>
-            </section>
-            <section class="projetos">
-                <h2><i class="fas fa-project-diagram"></i> Projetos Pessoais</h2>
-                <div class="project">
-                    <p><strong>Site Pessoal com React</strong> (2023)</p>
-                    <p>Desenvolvi um site portfólio utilizando React, com design responsivo e integração com GitHub Pages. Disponível em: <a href="https://github.com/agomes/meu-portfolio" target="_blank">github.com/agomes/meu-portfolio</a>.</p>
-                </div>
-                <div class="project">
-                    <p><strong>Gerenciador de Tarefas em JavaScript</strong> (2022)</p>
-                    <p>Criei uma aplicação web de gerenciamento de tarefas com HTML, CSS e JavaScript puro, com funcionalidades de adição e remoção de tarefas.</p>
-                </div>
-            </section>
-            <section class="freelancers">
-                <h2><i class="fas fa-user-tie"></i> Trabalhos Freelancers</h2>
-                <div class="freelance">
-                    <p><strong>Desenvolvimento de Site para Pequena Empresa</strong> - 2023</p>
-                    <p>Desenvolvi um site básico para uma Oficina usando HTML, CSS e MySQL para agendamento de serviços automotivos, entregue em 2 semanas.</p>
-                </div>
-                <div class="freelance">
-                    <p><strong>Manutenção de Sistema Web</strong> - 2022</p>
-                    <p>Realizei ajustes e correções em um sistema web existente, utilizando JavaScript e MySQL, para um cliente autônomo.</p>
-                </div>
-            </section>
-            <section class="experiencia">
-                <h2><i class="fas fa-briefcase"></i> Experiência Profissional (Outras Áreas)</h2>
-                <div class="job">
-                    <p><strong>Analista de Suporte Jr</strong> - Rede D'or Hospital São Luiz</p>
-                    <p>Prestei suporte técnico em software e parametrizações, desenvolvendo habilidades em resolução de problemas e lógica analítica, úteis para programação.</p>
-                </div>
-                <div class="job">
-                    <p><strong>Analista de Suporte Field</strong> - Tecnocomp Tecnologia e Serviços</p>
-                    <p>Suporte técnico a sistemas de PDV, web e redes, com foco em troubleshooting e administração de sistemas.</p>
-                </div>
-                <div class="job">
-                    <p><strong>Analista de Suporte Sr</strong> - BRCA Consultoria em TI</p>
-                    <p>Suporte técnico local e remoto, com configuração de sistemas e gerenciamento no Active Directory.</p>
-                </div>
-                <div class="job">
-                    <p><strong>Analista de Suporte Sr</strong> - Realeza Informática (Algar Tech)</p>
-                    <p>Suporte a usuários VIPs, configuração de bancos de dados (Oracle, MySQL) e gestão de segurança de rede.</p>
-                </div>
-            </section>
-        </div>
-        <button id="gerarPDF" class="pdf-button"><i class="fas fa-file-pdf"></i> Baixar Currículo (PDF)</button>
+            <div class="project">
+                <h3>Gerenciador de Tarefas em JavaScript</h3>
+                <p>Uma aplicação web para gerenciar tarefas, usando JavaScript puro.</p>
+                <a href="projects/project2.html">Ver Detalhes</a>
+            </div>
+        </section>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
