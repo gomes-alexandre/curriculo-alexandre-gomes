@@ -1,0 +1,176 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 900px;
+    display: flex;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left-column {
+    width: 35%;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #fff;
+    padding: 20px;
+    position: relative;
+}
+
+.right-column {
+    width: 65%;
+    padding: 20px;
+    background: #fff;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #3498db;
+}
+
+h1 {
+    color: #3498db;
+    margin: 0 0 10px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.9em;
+}
+
+/* Ajuste específico para a seção de formação na coluna esquerda */
+.left-column .formacao p {
+    color: #fff;
+    font-size: 1em;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Estilo para o título da seção na coluna esquerda */
+.left-column h2 {
+    color: #fff;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Estilos para Idiomas e Interesses na coluna esquerda */
+.left-column .idiomas p,
+.left-column .interesses p {
+    color: #fff;
+    font-size: 1em;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.info-contato .contato-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.info-contato i {
+    margin-right: 10px;
+    color: #3498db;
+    opacity: 0.9;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.job, .project, .freelance, .certificado {
+    margin: 15px 0;
+}
+
+.habilidades .skill {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.habilidades .skill i {
+    margin-right: 8px;
+    color: #3498db;
+    width: 20px;
+    text-align: center;
+}
+
+.habilidades .skill span {
+    margin-right: 10px;
+    font-weight: 500;
+    flex: 1;
+}
+
+.skill-bar {
+    height: 10px;
+    background: #3498db;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+    width: 60%;
+}
+
+.skill-bar:hover {
+    background: #2980b9;
+}
+
+.pdf-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1000;
+}
+
+.pdf-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+    }
+    .left-column, .right-column {
+        width: 100%;
+    }
+    .pdf-button {
+        position: static;
+        margin-top: 20px;
+        width: 100%;
+    }
+}
